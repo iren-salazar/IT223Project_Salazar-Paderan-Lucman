@@ -1,1 +1,1 @@
-# IT223Project_Lucman-Salazar
+# IT223Project_Salazar-Paderan-Lucman
