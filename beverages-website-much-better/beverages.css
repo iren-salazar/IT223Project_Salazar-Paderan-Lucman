@@ -4,10 +4,14 @@ body {
   padding: 0;
 }
 
+/*Enhance the header style:*/
 header {
   background-color: #cbc81c;
   color: #fff;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
@@ -71,7 +75,131 @@ footer {
   padding: 20px;
   text-align: center;
 }
-.p {
-  text-align: center;
-  padding: 50px;
+
+
+
+/*Update the font styles:*/
+body {
+  font-family: 'Arial', sans-serif;
 }
+
+h1,
+h2,
+h3 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+
+
+.logo img {
+  max-width: 150px;
+  vertical-align: middle;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/*Style the hero section with a background image:*/
+.hero {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px;
+  text-align: center;
+}
+/*color sa products display texts*/
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #555;
+}
+/*Enhance the featured products section:*/
+.featured-products {
+  padding: 50px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.featured-products h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.product {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.product p.price {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.product .btn-primary {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.product .btn-primary:hover {
+  background-color: #555;
+}
+
