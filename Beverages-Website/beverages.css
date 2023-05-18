@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,7 +7,7 @@ body {
 
 /*Enhance the header style:*/
 header {
-  background-color: #cbc81c;
+  background-color: #D6B357;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -26,6 +27,7 @@ nav ul li {
 }
 
 nav ul li a {
+  font-family: sans-serif;
   color: #000000;
   text-decoration: none;
   transition: color 0.3s ease;
