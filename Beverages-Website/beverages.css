@@ -205,5 +205,21 @@ nav ul li a:hover {
   background-color: #555;
 }
 
+@media (max-width: 1560px) {
+    header{
+      padding:15px 40px;
+      }
+}
 
-
+@media (max-width: 1140px) {
+  .navbar{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+  .navbar ul{
+    padding:1.5rem;
+    display: block;
+  }
+}
