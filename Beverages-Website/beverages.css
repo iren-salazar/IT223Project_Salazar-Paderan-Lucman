@@ -1,11 +1,18 @@
+/* General Styles */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/*Enhance the header style:*/
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+/* Header Styles */
+
 header {
   background-color: #D6B357;
   color: #fff;
@@ -13,6 +20,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo img {
+  max-width: 150px;
+  vertical-align: middle;
 }
 
 nav ul {
@@ -23,83 +35,6 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  font-family: sans-serif;
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ffffff; /* Change color on hover */
-}
-
-section {
-  padding: 50px;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.product {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
-  
-}
-
-.product img {
-  width: 300px;
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  text-align: center;
-  transition: box-shadow 0.3s ease;
-}
-
-.product h3 {
-  margin-top: 20px;
-}
-
-.product p {
-  margin-top: 10px;
-}
-
-footer {
-  background-color: #cbc81c;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-
-
-/*Update the font styles:*/
-body {
-  font-family: 'Arial', sans-serif;
-}
-
-h1,
-h2,
-h3 {
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-}
-
-
-
-.logo img {
-  max-width: 150px;
-  vertical-align: middle;
-}
-
-nav ul li {
   margin-left: 20px;
 }
 
@@ -113,15 +48,16 @@ nav ul li a:hover {
   color: #ffffff;
 }
 
-/*Style the hero section with a background image:*/
+/* Hero Section Styles */
+
 .hero {
-  background-clip: 'drinkingwine.mp4';
+  background-image: url('drinkingwine.mp4');
   background-size: cover;
   background-position: center;
   padding: 100px;
   text-align: center;
 }
-/*color sa products display texts*/
+
 .hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
@@ -134,18 +70,8 @@ nav ul li a:hover {
   color: #fff;
 }
 
-.btn-primary {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
+/* Featured Products Section Styles */
 
-.btn-primary:hover {
-  background-color: #555;
-}
-/*Enhance the featured products section:*/
 .featured-products {
   padding: 50px;
   text-align: center;
@@ -205,21 +131,65 @@ nav ul li a:hover {
   background-color: #555;
 }
 
+section, h2 {
+  text-align: center;
+}
+
+
+/* Footer Styles */
+
+footer {
+  background-color: #cbc81c;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+
 @media (max-width: 1560px) {
-    header{
-      padding:15px 40px;
-      }
+  header {
+    padding: 15px 40px;
+  }
 }
 
 @media (max-width: 1140px) {
-  .navbar{
+  .navbar {
     width: auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     text-align: center;
   }
-  .navbar ul{
-    padding:1.5rem;
+
+  .navbar ul {
+    padding: 1.5rem;
     display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .featured-products {
+    padding: 30px;
+  }
+
+  .featured-products h2 {
+    font-size: 28px;
+  }
+
+  .product {
+    width: 100%;
   }
 }
