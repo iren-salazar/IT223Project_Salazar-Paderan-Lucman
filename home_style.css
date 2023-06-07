@@ -1,0 +1,192 @@
+body {
+  background-color: #D6B357;
+   font-family: 'Inter', sans-serif;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_links li {
+  margin-left: 20px;
+}
+
+.nav_links li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: large;
+}
+
+.nav_links li a:hover {
+ color: white;
+}
+
+.section {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.content-container p {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  font-size: smaller;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align the image to the right side */
+  align-items: flex-end; /* Align the image to the bottom */
+  margin-left: 20px; /* Add margin between the image and the content */
+  margin-top: 100px; /* Move the image down a bit */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-container {
+  color: white;
+  flex: 1;
+  margin-top: 100px;
+  margin-right: 20px; /* Add margin between the paragraph and the image */
+}
+
+.text-container h2{
+  text-align: center;
+  font-size: 40px;
+}
+
+.text-container p {
+  font-size: 48px; /* Adjust the font size */
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-container {
+    margin-right: 0;
+    margin-bottom: 20px; /* Add margin between the paragraph and the image on smaller screens */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .nav_links {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .nav_links li {
+    margin: 0 10px;
+  }
+
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+footer {
+  background-color: #D6B357; /* Customize the background color as desired */
+  padding: 20px;
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  flex-basis: 30%; /* Adjust the width of each item as desired */
+}
+
+.footer-item h2 {
+  font-size: 18px; /* Customize the font size as desired */
+  margin-bottom: 10px; /* Add margin below the header */
+}
+
+.footer-item h1{
+  color: black;
+}
+
+.footer-item p {
+  color: black;
+  font-size: 14px; /* Customize the font size as desired */
+}
+.footer-item h2 {
+  color: black;
+}
+.text-container h2 { /*alcohol beverages name*/
+  font-size: 80px;
+  margin-top: 5px;
+
+}
+.text-container p{
+  font-size: 40px;
+  text-align: center;
+
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-item {
+    margin-bottom: 20px; /* Add margin between each item on smaller screens */
+  }
+}
+
+
