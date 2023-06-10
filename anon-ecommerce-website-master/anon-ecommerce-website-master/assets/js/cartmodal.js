@@ -25,7 +25,12 @@ function openModal() {
     // Add cart items to the modal
     cartItems.forEach(function (item) {
       var listItem = document.createElement("li");
-      listItem.textContent = item.name + " - Quantity: " + item.quantity;
+      listItem.textContent =
+        item.name +
+        " - Quantity: " +
+        item.quantity +
+        " - Price: $" +
+        item.price.toFixed(2);
       cartItemsList.appendChild(listItem);
     });
   }
@@ -42,12 +47,12 @@ function openModal() {
     if (existingItem) {
       existingItem.quantity++;
     } else {
-      cartItems.push({ name: item.name, quantity: 1 });
+      cartItems.push({ name: item.name, quantity: 1, price: item.price });
     }
   
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
     updateCartDisplay();
   }
   
-  // Example usage: addToCart({ name: "Product 1" });
+  // Example usage: addToCart({ name: "Product 1", price: 19.99 });
   

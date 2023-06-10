@@ -16,6 +16,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="assets/css/style-prefix.css">
+  <link rel="stylesheet" href="./assets/css/cartmodal.css">
 
   <!--
     - google font link
@@ -217,9 +218,9 @@
             <span class="count">0</span>
           </button>
 
-          <button class="action-btn">
-            <ion-icon name="bag-handle-outline"></ion-icon>
-            <span class="count">0</span>
+          <button class="action-btn" id="OpenCart">
+            <ion-icon name="cart-outline"></ion-icon>
+            <span id="cartCount" class="cartCount">0</span>
           </button>
 
         </div>
@@ -528,9 +529,22 @@
 
   <main>
 
+
+    <!-- The modal -->
+<div id="cartModal" class="Cartmodal">
+  <div class="cartmodal-content">
+    <span class="closeButton" onclick="closeModal()">&times;</span>
+    <h2>Your Cart</h2>
+    <ul id="cartItemsList"></ul>
+  </div>
+</div>
+
+
     <!--
       - BANNER
     -->
+
+    
 
     <div class="banner">
 
@@ -627,8 +641,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
 
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
 
                   </div>
@@ -652,7 +666,7 @@
                   </div>
 
                   <div class="price-box">
-                    <p class="price">$78.00</p>
+                    <span class="price">$78.00</span>
                     <del>$85.00</del>
                   </div>
 
@@ -683,8 +697,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -705,7 +719,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$58.00</p>
+                    <span class="price">$58.00</span>
                     <del>$65.00</del>
                   </div>
               
@@ -736,8 +750,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -758,7 +772,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$25.00</p>
+                    <span class="price">$25.00</span>
                     <del>$35.00</del>
                   </div>
               
@@ -787,8 +801,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -809,7 +823,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$99.00</p>
+                    <span class="price">$99.00</span>
                     <del>$105.00</del>
                   </div>
               
@@ -840,8 +854,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -862,7 +876,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$150.00</p>
+                    <span class="price">$150.00</span>
                     <del>$170.00</del>
                   </div>
               
@@ -890,8 +904,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -912,7 +926,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$100.00</p>
+                    <span class="price">$100.00</span>
                     <del>$120.00</del>
                   </div>
               
@@ -943,8 +957,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -965,7 +979,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$125.00</p>
+                    <span class="price">$125.00</span>
                     <del>$30.00</del>
                   </div>
               
@@ -1005,8 +1019,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
 
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
 
                   </div>
@@ -1030,7 +1044,7 @@
                   </div>
 
                   <div class="price-box">
-                    <p class="price">$78.00</p>
+                    <span class="price">$78.00</span>
                     <del>$85.00</del>
                   </div>
 
@@ -1061,8 +1075,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -1083,7 +1097,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$18.00</p>
+                    <span class="price">$18.00</span>
                     <del>$25.00</del>
                   </div>
               
@@ -1114,8 +1128,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -1136,7 +1150,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$25.00</p>
+                    <span class="price">$25.00</span>
                     <del>$35.00</del>
                   </div>
               
@@ -1165,8 +1179,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -1187,7 +1201,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$22.00</p>
+                    <span class="price">$22.00</span>
                     <del>$30.00</del>
                   </div>
               
@@ -1226,8 +1240,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
 
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
 
                   </div>
@@ -1251,7 +1265,7 @@
                   </div>
 
                   <div class="price-box">
-                    <p class="price">$78.00</p>
+                    <span class="price">$78.00</span>
                     <del>$85.00</del>
                   </div>
 
@@ -1282,8 +1296,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -1304,7 +1318,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$18.00</p>
+                    <span class="price">$18.00</span>
                     <del>$25.00</del>
                   </div>
               
@@ -1335,8 +1349,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -1357,7 +1371,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$25.00</p>
+                    <span class="price">$25.00</span>
                     <del>$35.00</del>
                   </div>
               
@@ -1395,8 +1409,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
 
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
 
                   </div>
@@ -1420,7 +1434,7 @@
                   </div>
 
                   <div class="price-box">
-                    <p class="price">$78.00</p>
+                    <span class="price">$78.00</span>
                     <del>$85.00</del>
                   </div>
 
@@ -1451,8 +1465,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -1473,7 +1487,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$18.00</p>
+                    <span class="price">$18.00</span>
                     <del>$25.00</del>
                   </div>
               
@@ -1504,8 +1518,8 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
-                      <ion-icon name="bag-add-outline"></ion-icon>
+                    <button class="AddtoCart" id="AddtoCart2">
+                      <ion-icon name="cart-outline"></ion-icon>
                     </button>
                   </div>
                 </div>
@@ -1526,7 +1540,7 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$25.00</p>
+                    <span class="price">$25.00</span>
                     <del>$35.00</del>
                   </div>
               
@@ -1804,6 +1818,8 @@
     - custom js link
   -->
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/cartmodal.js"></script>
 
   <!--
     - ionicon link
