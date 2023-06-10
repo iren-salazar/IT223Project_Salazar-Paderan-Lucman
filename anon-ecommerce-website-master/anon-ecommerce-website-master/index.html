@@ -216,8 +216,8 @@
           </button>
 
           <button class="action-btn">
-            <ion-icon name="bag-handle-outline"></ion-icon>
-            <span class="count">0</span>
+            <ion-icon name="cart-outline"></ion-icon>
+            <span id="cartCount" class="cartCount">0</span>
           </button>
 
         </div>
@@ -1195,7 +1195,7 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
 
-                    <button class="btn-action">
+                    <button class="AddtoCart" id="AddtoCart1">
                       <ion-icon name="bag-add-outline"></ion-icon>
                     </button>
 
@@ -1251,7 +1251,7 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
+                    <button class="AddtoCart" id="AddtoCart2">
                       <ion-icon name="bag-add-outline"></ion-icon>
                     </button>
                   </div>
@@ -1304,7 +1304,7 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
+                    <button class="AddtoCart" id="AddtoCart3">
                       <ion-icon name="bag-add-outline"></ion-icon>
                     </button>
                   </div>
@@ -1355,7 +1355,7 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
+                    <button class="AddtoCart" id="AddtoCart4">
                       <ion-icon name="bag-add-outline"></ion-icon>
                     </button>
                   </div>
@@ -1408,7 +1408,7 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
+                    <button class="AddtoCart" id="AddtoCart5">
                       <ion-icon name="bag-add-outline"></ion-icon>
                     </button>
                   </div>
@@ -1458,7 +1458,7 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
+                    <button class="AddtoCart" id="AddtoCart6">
                       <ion-icon name="bag-add-outline"></ion-icon>
                     </button>
                   </div>
@@ -1511,7 +1511,7 @@
                       <ion-icon name="repeat-outline"></ion-icon>
                     </button>
               
-                    <button class="btn-action">
+                    <button class="AddtoCart" id="AddtoCart7">
                       <ion-icon name="bag-add-outline"></ion-icon>
                     </button>
                   </div>
@@ -1810,12 +1810,15 @@
 
 
   <!--
-    - custom js link
+    - custom js links
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/cart.js"></script>
 
   <!--
-    - ionicon link
+    - ionicon link (BASICALLY I USED ICONS ON THE FIRST SCRIPT SA LINK NGA GI PASTE, SECOND IS ONLY IF DILI 
+    SUPPORTED ANG BROWSER NGA GI GAMIT, LIKE DI SYA GA SUPPORT UG MODULES. FIRST ONE DOES THO. FOR COMPATABILITY
+    WISE LANG NI.)
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
