@@ -1,0 +1,39 @@
+.Cartmodal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .cartmodal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-height: 80%;
+    overflow-y: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    background-color: #fefefe;
+  }
+  
+  .closeButton {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .closeButton:hover,
+  .closeButton:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

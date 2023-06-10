@@ -16,7 +16,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
-
+  <link rel="stylesheet" href="./assets/css/cartmodal.css">
   <!--
     - google font link
   -->
@@ -215,7 +215,7 @@
             <span class="count">0</span>
           </button>
 
-          <button class="action-btn">
+          <button class="action-btn" id="OpenCart">
             <ion-icon name="cart-outline"></ion-icon>
             <span id="cartCount" class="cartCount">0</span>
           </button>
@@ -526,10 +526,20 @@
 
   <main>
 
+<!-- The modal -->
+<div id="cartModal" class="Cartmodal">
+  <div class="cartmodal-content">
+    <span class="closeButton" onclick="closeModal()">&times;</span>
+    <h2>Your Cart</h2>
+    <ul id="cartItemsList"></ul>
+  </div>
+</div>
+
+
     <!--
       - BANNER
     -->
-
+  
     <div class="banner">
 
       <div class="container">
@@ -1814,6 +1824,7 @@
   -->
   <script src="assets/js/script.js"></script>
   <script src="assets/js/cart.js"></script>
+  <script src="assets/js/cartmodal.js"></script>
 
   <!--
     - ionicon link (BASICALLY I USED ICONS ON THE FIRST SCRIPT SA LINK NGA GI PASTE, SECOND IS ONLY IF DILI 
