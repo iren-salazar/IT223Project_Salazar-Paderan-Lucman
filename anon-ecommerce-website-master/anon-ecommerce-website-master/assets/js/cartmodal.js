@@ -17,12 +17,14 @@ cartButton.addEventListener("click", openModal);
 // Retrieve cart items from storage and display them in the modal
 var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 var cartItemsList = document.getElementById("cartItemsList");
+var totalAmount = document.querySelector(".total");
 
 function updateCartDisplay() {
   // Clear existing cart items
   cartItemsList.innerHTML = "";
 
-  // Add cart items to the modal
+  // Add cart items to the modal and calculate total price
+  var totalPrice = 0;
   cartItems.forEach(function (item) {
     var listItem = document.createElement("li");
     listItem.textContent =
@@ -32,7 +34,12 @@ function updateCartDisplay() {
       " - Price: $" +
       (item.price * item.quantity).toFixed(2);
     cartItemsList.appendChild(listItem);
+
+    totalPrice += item.price * item.quantity;
   });
+
+  // Display total price
+  totalAmount.textContent = "Total Amount: $" + totalPrice.toFixed(2);
 }
 
 // Update the cart display when the modal opens
