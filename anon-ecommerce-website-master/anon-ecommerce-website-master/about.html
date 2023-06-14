@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alcom - About Us</title>
+  <title>Alcom - Services</title>
 
   <!--
     - favicon
@@ -36,7 +36,83 @@
     - MODAL
   -->
 
+  <div class="modal" data-modal>
 
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="assets/images/products/Wines/banner.png" alt="subscribe to Alcom" width="400" height="400">
+      </div>
+
+      <div class="newsletter">
+
+        <form action="#">
+
+          <div class="newsletter-header">
+
+            <h3 class="newsletter-title">Subscribe to Alcom.</h3>
+
+            <p class="newsletter-desc">
+              Subscribe the <b>Alcom</b> to get latest products and discounts available.
+            </p>
+
+          </div>
+
+          <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  
+
+  
+
+
+
+  <!--
+    - NOTIFICATION TOAST
+  -->
+
+  <div class="notification-toast" data-toast>
+
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="assets/images/products/Wines/Moscato.png" alt="moscato" width="80" height="70">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        Someone just bought
+      </p>
+
+      <p class="toast-title">
+        Moscato
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M">2 Minutes</time> ago
+      </p>
+
+    </div>
+
+  </div>
 
 
 
@@ -229,18 +305,13 @@
       <ul class="mobile-menu-category-list">
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Home</a>
+          <a href="index.html" class="menu-title">Home</a>
         </li>
 
         <li class="menu-category">
 
-          <button class="accordion-menu" data-accordion-btn>
-            <p class="menu-title">Men's</p>
-
-            <div>
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-            </div>
+          <button class="accordion-menu" data-accordion-btn >
+            <a class="menu-title" href="gallery.html">Gallery</a>
           </button>
 
           <ul class="submenu-category-list" data-accordion>
@@ -253,111 +324,21 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
-            <p class="menu-title">Women's</p>
+            <a class="menu-title" href="Rservices.html">Services</a>
 
-            <div>
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-            </div>
           </button>
 
-          <ul class="submenu-category-list" data-accordion>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Dress & Frock</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Earrings</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Necklace</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Makeup Kit</a>
-            </li>
-
-          </ul>
+        
 
         </li>
 
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
-            <p class="menu-title">Jewelry</p>
-
-            <div>
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-            </div>
+            <a class="menu-title" href="about.html">About Us</a>
           </button>
 
-          <ul class="submenu-category-list" data-accordion>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Earrings</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Couple Rings</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Necklace</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Bracelets</a>
-            </li>
-
-          </ul>
-
         </li>
-
-        <li class="menu-category">
-
-          <button class="accordion-menu" data-accordion-btn>
-            <p class="menu-title">Perfume</p>
-
-            <div>
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-            </div>
-          </button>
-
-          <ul class="submenu-category-list" data-accordion>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Clothes Perfume</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Deodorant</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Flower Fragrance</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Air Freshener</a>
-            </li>
-
-          </ul>
-
-        </li>
-
-        <li class="menu-category">
-          <a href="#" class="menu-title">Blog</a>
-        </li>
-
-        <li class="menu-category">
-          <a href="#" class="menu-title">Hot Offers</a>
-        </li>
-
-      </ul>
 
       <div class="menu-bottom">
 
@@ -452,12 +433,8 @@
 
   <main>
     <section class="about-section">
-      <div class="image-container">
-
-        <img src="assets/images/winey.png" alt="Winey">
-
-      </div>
       <div class="container">
+      
         <h1>About Us</h1>
         <p>
           Welcome to our website! We are a dedicated team of professionals
@@ -489,7 +466,9 @@
   </main>
 
 
- 
+
+
+
 
 
   <!--
