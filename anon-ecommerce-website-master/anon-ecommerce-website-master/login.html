@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log In Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9c569;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #000000;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
+        label {
+            color: white;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .forgot-password-link {
+            color: skyblue;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <img  class="logo" src="assets/images/logo/alcomFinalLogo.png"  alt="Logo">
+    
+    <div class="container">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Your username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Your password">
+
+            <button type="submit">Login</button>
+
+            <input type="checkbox" name="login" id="login">
+            <label class="sign-in-text" for="login">Stay signed in</label>
+
+            <a href="forgot password" class="forgot-password-link" style="margin-left: 140px;">Forgot password?</a>
+
+            <button type="submit" style="background-color: rgb(223, 109, 34);">Create an Account</button>
+
+            <p class="error-message"></p>
+        </form>
+    </div>
+</body>
+</html>
