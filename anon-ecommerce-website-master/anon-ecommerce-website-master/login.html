@@ -16,7 +16,6 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: 100px;
-            
         }
 
         h2 {
@@ -68,33 +67,55 @@
             left: 20px;
             width: 80px;
         }
-        .login_beverages {
 
-            max-width: 450px;
-            float:left;
-            margin-left: 100px;
-            margin-top: 125px;
+        /* Responsive Styles */
 
-        }
-        .login_ices {
-            width: 100%;
-            float:left;
-            margin-right: 1000px;
-            margin-top: 70px;
-           
+        @media screen and (max-width: 600px) {
+            .container {
+                max-width: 90%;
+            }
         }
 
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+        }
 
+        @media screen and (max-width: 360px) {
+            .container {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            label, input[type="text"], input[type="password"] {
+                font-size: 14px;
+            }
+
+            .forgot-password-link {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <img  class="logo" src="assets/images/logo/alcomFinalLogo.png"  alt="Logo">
-    <img class="login_beverages" src="assets/images/products/beverages1.png" alt="beers_group">
-    <img class="login_ices" src="assets/images/products/ice.png" alt="ices_in_login">
 
-    
+    <a href="home.html" class="header-logo">
+        <img src="assets/images/logo/alcomFinalLogo.png" alt="Alcom's logo" width="50" height="50">
+    </a>
+
     <div class="container">
+
+        
         <h2>Login</h2>
         <form action="/login" method="POST">
             <label for="username">Username:</label>
