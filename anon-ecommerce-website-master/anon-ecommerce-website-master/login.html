@@ -15,7 +15,8 @@
             background-color: #000000;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 100px;
+            
+            margin-right: 95px;
         }
 
         h2 {
@@ -62,10 +63,21 @@
         }
 
         .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 80px;
+            max-width: 80px;
+            margin: 20px;
+        }
+
+        .login_beverages {
+            max-width: 35%;
+            display: block;
+            margin: 20px auto;
+            margin-left: 75px;
+        }
+
+        .login_ices {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
         }
 
         /* Responsive Styles */
@@ -73,6 +85,10 @@
         @media screen and (max-width: 600px) {
             .container {
                 max-width: 90%;
+            }
+
+            .logo {
+                max-width: 60px;
             }
         }
 
@@ -96,7 +112,9 @@
                 padding: 10px;
             }
 
-            label, input[type="text"], input[type="password"] {
+            label,
+            input[type="text"],
+            input[type="password"] {
                 font-size: 14px;
             }
 
@@ -108,14 +126,16 @@
 </head>
 
 <body>
+    <div>
+        <img class="logo" src="assets/images/logo/alcomFinalLogo.png" alt="Logo">
+    </div>
 
-    <a href="home.html" class="header-logo">
-        <img src="assets/images/logo/alcomFinalLogo.png" alt="Alcom's logo" width="50" height="50">
-    </a>
+    <div>
+        <img class="login_beverages" src="assets/images/products/beverages1.png" alt="beers_group">
+    </div>
+
 
     <div class="container">
-
-        
         <h2>Login</h2>
         <form action="/login" method="POST">
             <label for="username">Username:</label>
@@ -131,10 +151,15 @@
 
             <a href="forgot password" class="forgot-password-link" style="margin-left: 140px;">Forgot password?</a>
 
-            <button type="submit" style="background-color: rgb(223, 109, 34);">Create an Account</button>
+            <button type="submit" style="background-color: rgb(223, 109, 34);"> Create an Account</button> 
 
             <p class="error-message"></p>
         </form>
     </div>
+
+    <div class="footer">
+        <img class="login_ices" src="assets/images/products/ice.png" alt="ices_in_login">
+    </div>
+
 </body>
 </html>
