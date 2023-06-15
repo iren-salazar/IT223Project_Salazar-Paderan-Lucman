@@ -1,0 +1,97 @@
+:colors {
+    --eerie-black: hsl(0, 0%, 13%);
+  }
+  
+  .scsmodal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .scsmodal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 350px;
+    max-height: 80%;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: var(--border-radius-md);
+    border: 1px solid #888;
+    background-color: #fefefe;
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
+    align-items: center; /* Added */
+  }
+  
+  .scsmodal-content img {
+    max-width: 50%;
+    max-height: 60%;
+    margin: auto;
+  }
+  
+  .headermodal {
+    text-align: center;
+  }
+  
+  .btn-home {
+    color: white;
+    background-color: var(--eerie-black);
+    font-size: var(--fs-7);
+    font-weight: var(--weight-600);
+    text-transform: uppercase;
+    margin-top: 50px;
+    padding: 10px 15px;
+  }
+  
+  .btn-home:hover {
+    float: right;
+    color: white;
+    background-color: #525252;
+    font-size: var(--fs-7);
+    font-weight: var(--weight-600);
+    text-transform: uppercase;
+    padding: 10px 15px;
+  }
+  
+  .closeButton {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .closeButton:hover,
+  .closeButton:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Custom styles for desktop */
+  @media screen and (min-width: 768px) {
+    .scsmodal-content {
+      width: 70%;
+      max-width: 600px;
+      max-height: 70%;
+      padding: 40px;
+    }
+    
+    .scsmodal-content img {
+      max-width: 80%;
+      max-height: 70%;
+    }
+    
+    .btn-home {
+      margin-top: 20px;
+    }
+  }
+  

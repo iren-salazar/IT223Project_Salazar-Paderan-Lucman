@@ -3,27 +3,61 @@ window.addEventListener("load", function () {
   localStorage.removeItem("cartItems");
 });
 
+// Retrieve cart items from storage and display them in the modal
+var cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+var cartItemsList = document.getElementById("cartItemsList");
+var totalAmount = document.querySelector(".total");
+
 // Function to handle opening the cart modal
-function openModal() {
+function openModal1() {
   var modal = document.getElementById("cartModal");
   modal.style.display = "block";
+  updateCartDisplay();
 }
 
 // Function to handle closing the cart modal
-function closeModal() {
+function closeModal1() {
   var modal = document.getElementById("cartModal");
   modal.style.display = "none";
 }
 
 // Add event listener to the cart button to open the modal
 var cartButton = document.getElementById("OpenCart");
-cartButton.addEventListener("click", openModal);
+cartButton.addEventListener("click", openModal1);
 
-// Retrieve cart items from storage and display them in the modal
-var cartItems = [];
-var cartItemsList = document.getElementById("cartItemsList");
-var totalAmount = document.querySelector(".total");
+var cartButton = document.getElementById("OpenCart_mbl");
+cartButton.addEventListener("click", openModal1);
 
+// Update the cart display when a new item is added
+function addToCart(item) {
+  var existingItem = cartItems.find(function (cartItem) {
+    return cartItem.name === item.name;
+  });
+
+  if (existingItem) {
+    existingItem.quantity++;
+  } else {
+    cartItems.push({ name: item.name, quantity: 1, price: item.price });
+  }
+
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  updateCartDisplay();
+}
+
+// Update the quantity of an item in the cart
+function updateItemQuantity(item, newQuantity) {
+  var existingItem = cartItems.find(function (cartItem) {
+    return cartItem.name === item.name;
+  });
+
+  if (existingItem) {
+    existingItem.quantity = newQuantity;
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    updateCartDisplay();
+  }
+}
+
+// Update the cart display
 function updateCartDisplay() {
   // Clear existing cart items
   cartItemsList.innerHTML = "";
@@ -76,44 +110,17 @@ function updateCartDisplay() {
     totalPrice += item.price * item.quantity;
   });
 
-  // Display total price
-  totalAmount.innerHTML = "Order Summary<br><span style='font-size: 30px; font-weight: normal;'>Subtotal: $</span>" + totalPrice.toFixed(2);
-
-
-
-
+  // Display total price and order summary
+  totalAmount.innerHTML =
+    "Order Summary<br><span style='font-size: 30px; font-weight: normal;'>Subtotal: $" +
+    totalPrice.toFixed(2) +
+    "</span>";
 }
 
-// Update the cart display when the modal opens
-cartButton.addEventListener("click", updateCartDisplay);
-
-// Update the cart display when a new item is added
-function addToCart(item) {
-  var existingItem = cartItems.find(function (cartItem) {
-    return cartItem.name === item.name;
-  });
-
-  if (existingItem) {
-    existingItem.quantity++;
-  } else {
-    cartItems.push({ name: item.name, quantity: 1, price: item.price });
-  }
-
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  updateCartDisplay();
+// Function to clear the cart and refresh the page
+function clearCart() {
+  localStorage.removeItem("cartItems"); // Remove cart items from storage
+  location.reload(); // Refresh the page
 }
 
-// Update the quantity of an item in the cart
-function updateItemQuantity(item, newQuantity) {
-  var existingItem = cartItems.find(function (cartItem) {
-    return cartItem.name === item.name;
-  });
-
-  if (existingItem) {
-    existingItem.quantity = newQuantity;
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    updateCartDisplay();
-  }
-}
-
-// Example usage: addToCart({ name: "Product 1", price: 19.99 });
+// Example usage: clearCart();

@@ -13,10 +13,11 @@
   <link rel="shortcut icon" href="./assets/images/logo/alcomFinalLogo.png" type="image/x-icon">
 
   <!--
-    - custom css link
+    - custom css links
   -->
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
   <link rel="stylesheet" href="./assets/css/cartmodal.css">
+  <link rel="stylesheet" href="./assets/css/sucessmodal.css">
   <!--
     - google font link
   -->
@@ -268,13 +269,13 @@
         <ion-icon name="menu-outline"></ion-icon>
       </button>
 
-      <button class="action-btn">
+      <button class="action-btn" id="OpenCart_mbl">
         <ion-icon name="bag-handle-outline"></ion-icon>
 
         <span class="count">0</span>
       </button>
 
-      <button class="action-btn">
+      <button class="action-btn" id="homebtn_mobile">
         <ion-icon name="home-outline"></ion-icon>
       </button>
 
@@ -434,24 +435,30 @@
 
   <main>
 
-<!-- The modal -->
+<!-- The CART MODAL -->
 <div id="cartModal" class="Cartmodal">
   <div class="cartmodal-content">
-    <span class="closeButton" onclick="closeModal()">&times;</span>
+    <span class="closeButton" onclick="closeModal1()">&times;</span>
     <h2>Your Cart</h2>
-    <h2 class="payment_method">Payment Method</h2>
+    <h2 class="payment_method"></h2>
     <ul id="cartItemsList"></ul>
     <br>
     <br>
     <br>
     <br>
     <h1 class="total"></h1>
-    <button class="btn-purchase">Purchase</button>
+    <button class="btn-purchase" id="btn-prch">Purchase</button>
     
   </div>
 </div>
-
-
+<!-- The CART COMPLETION MODAL -->
+<div id="scsModal" class="scsmodal">
+  <div class="scsmodal-content">
+    <h2 class="headermodal">Your Order is on its Way!</h2>
+    <img src="assets/images/fast-delivery.png">
+    <button class="btn-home" id="btn-hm">HOME</button>
+  </div>
+</div>
     <!--
       - BANNER
     -->
@@ -1717,6 +1724,8 @@
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/cartmodal.js"></script>
   <script src="assets/js/search.js"></script>
+  <script src="assets/js/sucessmodal.js"></script>
+  <script src="assets/js/mobilenav.js"></script>
   <!--
     - ionicon link (BASICALLY I USED ICONS ON THE FIRST SCRIPT SA LINK NGA GI PASTE, SECOND IS ONLY IF DILI 
     SUPPORTED ANG BROWSER NGA GI GAMIT, LIKE DI SYA GA SUPPORT UG MODULES. FIRST ONE DOES THO. FOR COMPATABILITY
@@ -1725,6 +1734,7 @@
   
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
 
 </body>
 
