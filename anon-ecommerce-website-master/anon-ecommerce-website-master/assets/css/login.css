@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9c569;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+label {
+  color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.forgot-password-link {
+  color: skyblue;
+}
+
+.logo {
+  max-width: 80px;
+  margin: 20px;
+}
+
+
+
+
+.login_beverages {
+  max-width: 60%;
+  margin-left: 180px;
+  margin-bottom: 120px;
+}
+
+.login_container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  margin-right: 100px;
+  margin-bottom: 200px;
+}
+
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 600px) {
+  .container {
+      max-width: 90%;
+  }
+
+  .logo {
+      max-width: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+      padding: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+      padding: 10px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  label,
+  input[type="text"],
+  input[type="password"] {
+      font-size: 14px;
+  }
+
+  .forgot-password-link {
+      font-size: 12px;
+  }
+}

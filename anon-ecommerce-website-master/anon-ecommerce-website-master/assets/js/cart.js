@@ -5,10 +5,10 @@ var cartCount = 0;
 var cartItems = [];
 
 addToCartBtns.forEach(function(button) {
-  button.addEventListener('click', function() {
-    var productElement = button.closest('.showcase');
-    var productName = productElement.querySelector('.showcase-title').textContent;
-    var productPrice = parseFloat(productElement.querySelector('.price').textContent);
+  button.addEventListener('click', function() {                                                 // Code executed when a button is clicked
+    var productElement = button.closest('.showcase');                                           // Find the closest ancestor element with the class "showcase"
+    var productName = productElement.querySelector('.showcase-title').textContent;              // Get the text content of the element 
+    var productPrice = parseFloat(productElement.querySelector('.price').textContent);          // - with the class "showcase-title" within the productElement
     var productQuantity = 1;
 
     // Update cart count

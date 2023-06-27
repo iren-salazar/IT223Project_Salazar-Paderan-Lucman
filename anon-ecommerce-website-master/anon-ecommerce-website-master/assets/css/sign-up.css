@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #D6B357;
+}
+
+
+
+h2 {
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+label {
+  color: white;
+}
+
+
+.alcomlogo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+}
+
+.Signup_beverages {
+
+  max-width: 40%;
+  float: left;
+  margin-left: 80px;
+  margin-top: 60px;
+
+}
+
+.signUp_container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  margin-right: 100px;
+  margin-bottom: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+

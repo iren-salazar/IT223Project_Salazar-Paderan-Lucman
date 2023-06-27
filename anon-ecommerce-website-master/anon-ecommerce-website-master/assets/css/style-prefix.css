@@ -38,7 +38,7 @@
 
   --fs-1: 1.563rem;
   --fs-2: 1.375rem;
-  --fs-3: 1.25rem;
+  --fs-3: 1.25rem;           /* BALE MAO NI SILA AKONG MGA CUSTOM PROPERTIES FOR FONT SIZE */   
   --fs-4: 1.125rem;
   --fs-5: 1rem;
   --fs-6: 0.938rem;
@@ -65,8 +65,8 @@
    * transition 
    */
 
-  --transition-timing: 0.2s ease;
-
+  --transition-timing: 0.2s ease;   /* Custom Property for transition timing of modal*/   
+ 
 }
 
 

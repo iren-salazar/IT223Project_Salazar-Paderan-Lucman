@@ -2,87 +2,7 @@
 <html>
 <head>
     <title>Sign Up Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #D6B357;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #000000;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 100px;
-            margin-right: 95px;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        input[type="text"],
-        input[type="password"],
-        input[type="email"] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button:hover {
-            opacity: 0.8;
-        }
-
-        .error-message {
-            color: red;
-            margin-top: 10px;
-            text-align: center;
-        }
-        label {
-            color: white;
-        }
-
-
-        .alcomlogo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 80px;
-        }
-
-        .Signup_beverages {
-
-            max-width: 100px;
-            float:left;
-            margin-left: 100px;
-            margin-top: 125px;
-
-        }
-
-        .Signup_ices {
-            width: 80%;
-            float:left;
-            margin-right: 1000px;
-            margin-top: 100%;
-           
-        }
-
-    </style>
+    <link rel="stylesheet" href="./assets/css/sign-up.css">
 </head>
 <body>
 
@@ -90,50 +10,52 @@
         <img src="assets/images/logo/alcomFinalLogo.png" alt="Alcom's logo" width="50" height="50">
     </a> 
     
-    <div>
-        <img class="Signup_beverages" src="assets/images/products/beverages1.png" alt="beers_group">
-    </div>
+    
 
     <div class="container">
-        <h2>Sign Up</h2>
-        <form action="/signup" method="POST">
-            <label for="full name">Full Name:</label>
-            <input type="text" id="full name" name="full name" placeholder="Full name">
-
-            <label for="complete address">Complete Address:</label>
-            <input type="text" id="username" name="username" placeholder="Address">
-
-            <label for="phone number">Phone Number:</label>
-            <input type="text" id="username" name="username" placeholder="09*********">
-            <br>
-            <br>
-            
-            <label for="Date of birth">Date of Birth</label>
-            <input type="date" name="" id="">
-            <br>
-            <br>
-
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Choose a username">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your email address">
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Choose a password">
-
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
-
-            <button type="submit">Sign Up</button>
-
-            <p class="error-message"></p>
-        </form>
+        <div>
+            <img class="Signup_beverages" src="assets/images/products/beverages1.png" alt="beers_group">
+        </div>
+        
+        <div class="signUp_container">
+            <h2>Sign Up</h2>
+            <form action="/signup" method="POST">
+                <label for="full name">Full Name:</label>
+                <input type="text" id="full name" name="full name" placeholder="Full name">
+    
+                <label for="complete address">Complete Address:</label>
+                <input type="text" id="username" name="username" placeholder="Address">
+    
+                <label for="phone number">Phone Number:</label>
+                <input type="text" id="username" name="username" placeholder="09*********">
+                <br>
+                <br>
+                
+                <label for="Date of birth">Date of Birth</label>
+                <input type="date" name="" id="">
+                <br>
+                <br>
+    
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username">
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email address">
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Choose a password">
+    
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+    
+                <button type="submit"><a href="index.html">Sign Up</a></button>
+    
+                <p class="error-message"></p>
+            </form>
+        </div>
+       
     </div>
 
-    <div class="footer">
-        <img class="Signup_ices" src="assets/images/products/ice.png" alt="ices_in_login">
-    </div>
 
 </body>
 </html>

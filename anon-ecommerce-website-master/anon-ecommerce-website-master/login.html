@@ -2,164 +2,47 @@
 <html>
 <head>
     <title>Log In Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e9c569;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 25px;
-            background-color: #000000;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 3px;
-            margin-right: 95px;
-        }
-
-        h2 {
-            text-align: center;
-            color: rgb(255, 255, 255);
-        }
-
-        label {
-            color: white;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button:hover {
-            opacity: 0.8;
-        }
-
-        .error-message {
-            color: red;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        .forgot-password-link {
-            color: skyblue;
-        }
-
-        .logo {
-            max-width: 80px;
-            margin: 20px;
-        }
-
-        .login_beverages {
-            max-width: 35%;
-            display: block;
-            margin: 20px auto;
-            margin-left: 75px;
-        }
-
-        .login_ices {
-            max-width: 100%;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Responsive Styles */
-
-        @media screen and (max-width: 600px) {
-            .container {
-                max-width: 90%;
-            }
-
-            .logo {
-                max-width: 60px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .container {
-                padding: 15px;
-            }
-        }
-
-        @media screen and (max-width: 360px) {
-            .container {
-                padding: 10px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            button {
-                font-size: 14px;
-                padding: 10px;
-            }
-
-            label,
-            input[type="text"],
-            input[type="password"] {
-                font-size: 14px;
-            }
-
-            .forgot-password-link {
-                font-size: 12px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/login.css">
 </head>
+
 
 <body>
     <div>
         <img class="logo" src="assets/images/logo/alcomFinalLogo.png" alt="Logo">
     </div>
 
-    <div>
-        <img class="login_beverages" src="assets/images/products/beverages1.png" alt="beers_group">
-    </div>
+    
 
 
     <div class="container">
-        <h2>Login</h2>
-        <form action="/login" method="POST">
+        <div>
+          <img class="login_beverages" src="assets/images/products/beverages1.png" alt="beers_group">
+        </div>
+      
+        <div class="login_container">
+          <h2>Login</h2>
+          <form action="/login" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" placeholder="Your username">
-
+      
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Your password">
-
-            <button type="submit">Login</button>
-
+      
+            <button type="submit"><a href="index.html">Login</a></button>
+      
             <input type="checkbox" name="login" id="login">
             <label class="sign-in-text" for="login">Stay signed in</label>
-
+      
             <a href="forgot password" class="forgot-password-link" style="margin-left: 140px;">Forgot password?</a>
-
-            <button type="submit" style="background-color: rgb(223, 109, 34);"> Create an Account</button> 
-
+      
+            <button type="submit" style="background-color: rgb(223, 109, 34);"> Create an Account</button>
+      
             <p class="error-message"></p>
-        </form>
-    </div>
+          </form>
+        </div>
+      </div>
 
-    <div class="footer">
-        <img class="login_ices" src="assets/images/products/ice.png" alt="ices_in_login">
-    </div>
+    <script src="assets/js/loginbtn.js"></script>
 
 </body>
 </html>

@@ -154,10 +154,13 @@ footer {
 .footer-item h2 {
   font-size: 18px; /* Customize the font size as desired */
   margin-bottom: 10px; /* Add margin below the header */
+  float: left;
+  
 }
 
 .footer-item h1{
   color: black;
+  margin-right: 70%;
 }
 
 .footer-item p {
